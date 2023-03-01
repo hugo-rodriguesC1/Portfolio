@@ -1,19 +1,35 @@
 <template>
-  <header>
-    <icon-logo />
-    <FilmIcon class="h-5 w-5 fill-blue-300 stroke-blue-600" />
-    <nav>
-      <RouterLink to="/" class="text-blue-600 underline">Accueil</RouterLink>
-    </nav>
-  </header>
+  <div >
+    <div class="noise"></div>
+    <div class="font-normal text-3xl text-[#154D13] border-2 border-white p-10 mt-[7.5vh] mx-[5vw] flex items-center justify-between" >
+      <router-link to="/work">work</router-link>
+      <router-link to="/contact">contact</router-link>
+    </div>
+    <router-view class=" mx-[5vw]"></router-view>
 
-  <RouterView />
+    <router-link to="/" class="font-normal text-xl text-[#154d13] flex items-center justify-center mt-8" >Hugo Rodrigues</router-link>
+
+  </div>
 </template>
 
-<script>
+<style>
+
+.noise::before{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    content: "";
+    opacity: .1;
+    z-index: 100;
+    pointer-events: none;
+    background: url(./assets/noise.gif);
+}
+
+</style>
+
+<script setup>
 import IconLogo from "./components/icons/IconLogo.vue";
 import { FilmIcon } from "@heroicons/vue/outline";
-export default {
-  components: { IconLogo, FilmIcon },
-};
 </script>
