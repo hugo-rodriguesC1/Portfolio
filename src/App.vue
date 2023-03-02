@@ -1,13 +1,13 @@
 <template>
   <div >
     <div class="noise"></div>
-    <div class="font-normal text-3xl text-[#154D13] border-2 border-white p-10 mt-[7.5vh] mx-[5vw] flex items-center justify-between" >
+    <div class="font-normal text-3xl text-[#154D13] border-2 border-white 3xl:p-10 p-6  mt-[7.5vh] mx-[5vw] flex items-center justify-between" >
       <router-link to="/work">work</router-link>
       <router-link to="/contact">contact</router-link>
     </div>
     <router-view class=" mx-[5vw]"></router-view>
 
-    <router-link to="/" class="font-normal text-xl text-[#154d13] flex items-center justify-center mt-8" >Hugo Rodrigues</router-link>
+    <router-link to="/" class="font-normal text-xl text-[#154d13] flex items-center justify-center 3xl:mt-8 mt-4" >Hugo Rodrigues</router-link>
 
   </div>
 </template>

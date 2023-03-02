@@ -3,22 +3,22 @@
 
     
 
-    <div class="mt-[2vh]">
+    <div class="mt-[2vh] 3xl:text-[8.5rem] text-[5.5rem]">
         <div class="flex items-center justify-between h-[13vh]">
-            <h1 class="font-normal text-[8.5rem] text-[#154d13] uppercase ">Digital</h1>
-            <img src="../assets/bg1.png" alt="">
+            <h1 class="font-normal  text-[#154d13] uppercase ">Digital</h1>
+            <img src="../assets/bg1.png" alt="" class="3xl:w-full max-h-[12.5vh]">
         </div>
         <div class="flex items-center justify-between h-[13vh] ">
-            <h1 class="font-normal text-[8.5rem] text-[#154d13] uppercase ">Designer</h1>
-            <img src="../assets/bg2.png" alt="">
+            <h1 class="font-normal  text-[#154d13] uppercase ">Designer</h1>
+            <img src="../assets/bg2.png" alt="" class="3xl:w-full max-h-[12.5vh]">
         </div>
         <div class="flex items-center justify-between h-[13vh] ">
-            <h1 class="font-normal text-[8.5rem] text-[#154d13] uppercase ">Creative</h1>
-            <img src="../assets/bg3.png" alt="">
+            <h1 class="font-normal  text-[#154d13] uppercase ">Creative</h1>
+            <img src="../assets/bg3.png" alt="" class="3xl:w-full max-h-[12.5vh]">
         </div>
         <div class="flex items-center justify-between h-[13vh] ">
-            <h1 class="font-normal text-[8.5rem] text-[#154d13] uppercase ">Developer</h1>
-            <img src="../assets/bg4.png" alt="">
+            <h1 class="font-normal  text-[#154d13] uppercase ">Developer</h1>
+            <img src="../assets/bg4.png" alt="" class="3xl:w-full max-h-[12.5vh]">
         </div>
     </div>
 
