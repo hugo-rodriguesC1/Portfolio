@@ -7,7 +7,7 @@
     </div>
     <router-view class=" mx-[5vw]"></router-view>
 
-    <router-link to="/" class="font-normal text-xl text-[#154d13] flex items-center justify-center 3xl:mt-8 mt-4" >Hugo Rodrigues</router-link>
+    <router-link to="/" @click="Refresh()" class="font-normal text-xl text-[#154d13] flex items-center justify-center 3xl:mt-8 mt-4" >Hugo Rodrigues</router-link>
 
   </div>
 </template>
@@ -32,4 +32,11 @@
 <script setup>
 import IconLogo from "./components/icons/IconLogo.vue";
 import { FilmIcon } from "@heroicons/vue/outline";
+
+function Refresh() {
+  setTimeout(() => {
+    document.location.reload();
+  }, 1);
+}
+
 </script>
