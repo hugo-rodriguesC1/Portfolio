@@ -1,19 +1,18 @@
 module.exports = {
-  content: [
-    "./index.html",
-    "./src/**/*.{vue,js,ts,jsx,tsx}",
-  ],
+  content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
   theme: {
     extend: {
-      "colors": {
+      colors: {
         // Ici vos couleurs exportées de Figma
       },
-      "fontFamily": {
+      fontFamily: {
         // Ici vos familles de polices exportées de Figma
         // Ne pas oublier de les charger dans '/index.html' !
       },
+      screens: {
+        "3xl": "1900px",
+      },
     },
-
   },
   plugins: [],
-}
+};

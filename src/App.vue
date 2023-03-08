@@ -1,13 +1,13 @@
 <template>
   <div >
     <div class="noise"></div>
-    <div class="font-normal text-3xl text-[#154D13] bg-[#D3D1CC] border-2 border-white 3xl:p-10 p-6 mt-[7.5vh] mx-[5vw] flex items-center justify-between fixed top-0 left-0 right-0" >
+    <div class="font-light text-3xl text-[#154D13] bg-[#D3D1CC] border-2 border-white 3xl:p-10 p-6 mt-[7.5vh] mx-[5vw] flex items-center justify-between fixed top-0 left-0 right-0" >
       <router-link to="/work">work</router-link>
       <router-link to="/contact">contact</router-link>
     </div>
-    <router-view class="mt-40 mx-[5vw]"></router-view>
+    <router-view class="mt-[16vh] mx-[5vw] 3xl:mt-[20vh]"></router-view>
 
-    <router-link to="/" @click="Refresh()" class="font-normal text-xl text-[#154d13] flex items-center justify-center 3xl:mt-8 my-2 " >Hugo Rodrigues</router-link>
+    <router-link to="/" @click="Refresh()" class="font-normal text-xl text-[#154d13] flex items-center justify-center 3xl:mt-[3.5vh] my-2" >Hugo Rodrigues</router-link>
 
   </div>
 </template>
@@ -26,6 +26,9 @@
     pointer-events: none;
     background: url(./assets/noise.gif);
 }
+
+
+
 
 </style>
 

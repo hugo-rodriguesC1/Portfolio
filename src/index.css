@@ -3,3 +3,5 @@
 @tailwind utilities;
 
 /* Mettre ici les styles "globaux" */
+
+* {font-family: 'indivisible-variable', sans-serif;}
