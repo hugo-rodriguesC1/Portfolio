@@ -1,54 +1,45 @@
-<script>
-import { onMounted, defineComponent } from "vue";
-import { Box, Camera, LambertMaterial, PointLight, Renderer, Scene, GltfModel } from "troisjs";
-export default defineComponent({
-  components: {
-    Renderer,
-    Scene,
-    Camera,
-    PointLight,
-    GltfModel,
-  },
-  setup() {
-    function onReady(e) {
-      console.log("render is ready", e);
-    }
+<script setup>
+import { onMounted } from "vue";
 
-    return {
-      onReady,
-    };
-  },
-});
 </script>
 
 <template>
   <div>
+    <div id="anchor" class="absolute top-0"></div>
+    <a href="#anchor" class="fixed bottom-20 right-[5vw] bg-[#154d13] opacity-50 w-14 h-14 flex justify-center items-center font-normal text-xl text-white hover:opacity-100 hover:w-16 hover:h-16 transition-all">TOP</a>
+
     <h1 class="self-start text-[8.5rem] uppercase leading-none text-[#154d13]">DL44</h1>
     <div class="flex justify-between gap-10 text-xl font-normal text-[#154d13]">
       <div class="flex flex-1 flex-col">
         <p>
-          This Website was created during an exam in my first year of BUT MMI. The goal was to imagine a music festival with all its graphic
-          identity and then develop the website in vuejs.
+          This is my first creation with Blender. In the same time, I was developping a star wars based video game, so I decided to model
+          the blaster whiwh will be used in the game.
         </p>
         <br />
         <p>
-          First I thought of a hiphop festival gathering artists from different nationality and language. I began by drawing some logos on
-          paper to find an interesting design. I then finalized the design on Illustrator. Next I began to work on Figma for the website
-          design.
+          This work allows me to learn the bases of modeling with Blender. I used multiple modifiers and I could begin to learn some stuff on materials.
         </p>
+        <br>
+        <p>The goal was to export the model in order to use it on an Unreal Engine 5 project.</p>
       </div>
       <div class="flex flex-1 flex-col">
-        <Renderer alpha antialias :orbitCtrl="true">
-          <Camera :position="{ z: 5, x: 0, y: 0 }" />
-          <Scene>
-            <PointLight :position="{ y: 50, z: 50 }" />
-            <PointLight :position="{ y: -100, z: -50 }" />
-            <PointLight :position="{ y: 100, x: -50 }" />
-            <PointLight :position="{ y: -100, x: -50 }" />
-            <GltfModel src="src\assets\Dl44\dl44.gltf" @load="onReady" />
-          </Scene>
-        </Renderer>
+        <img src="../assets/Dl44/render.png" alt="" class="small"/>
+      </div>
+    </div>
+
+    <div class="flex items-center justify-between gap-10 text-xl font-normal text-[#154d13] my-10">
+      <div class="flex flex-1 flex-col">
+        <img src="../assets/Dl44/step1.png" alt="" />
+      </div>
+      <div class="flex flex-1 flex-col">
+        <img src="../assets/Dl44/step2.png" alt="" />
+      </div>
+      <div class="flex flex-1 flex-col">
+        <img src="../assets/Dl44/step3.png" alt="" />
       </div>
     </div>
   </div>
 </template>
+
+<style>
+</style>
