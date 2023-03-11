@@ -12,18 +12,17 @@ function Refresh() {
   <div>
     <div class="noise"></div>
     <div
-      class="fixed top-0 left-0 right-0 mx-[5vw] mt-[7.5vh] flex items-center justify-between border-2 border-white bg-[#D3D1CC] p-6 text-3xl font-light text-[#154D13] 3xl:p-10"
+      class="fixed top-0 left-0 right-0 mx-[5vw] mt-[7.5vh] flex items-center justify-between border-2 border-white bg-[#D3D1CC] py-8 px-8 text-3xl font-light text-[#154D13] 3xl:p-10"
     >
       <router-link to="/work">work</router-link>
-      <router-link to="/" @click="Refresh()" class="my-2 flex items-center justify-center text-xl font-normal text-[#154d13] 3xl:mt-[3.5vh]"
+      <router-link to="/" @click="Refresh()" class="my-2 flex items-center justify-center text-xl font-normal text-[#154d13]"
         >Hugo Rodrigues</router-link
       >
       <router-link to="/contact">contact</router-link>
     </div>
-    <router-view class="mx-[5vw] mt-[25vh] 3xl:mt-[20vh]"></router-view>
+    <router-view class="mx-[5vw] mt-[25vh] 3xl:mt-[22vh] mb-20"></router-view>
   </div>
 </template>
-
 
 <style>
 .noise::before {
@@ -39,4 +38,3 @@ function Refresh() {
   background: url(./assets/noise.gif);
 }
 </style>
-

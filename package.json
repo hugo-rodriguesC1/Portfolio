@@ -10,7 +10,12 @@
     "@heroicons/vue": "^1.0.6",
     "@luxdamore/vue-cursor-fx": "^1.6.2",
     "curtainsjs": "^8.1.4",
+    "kursor": "^0.1.6",
+    "sf-vue-animated-cursor": "^1.0.0",
+    "three": "^0.134.0",
+    "troisjs": "^0.3.4",
     "vue": "^3.2.33",
+    "vue-animated-cursor": "^1.0.3",
     "vue-router": "^4.0.14"
   },
   "devDependencies": {
