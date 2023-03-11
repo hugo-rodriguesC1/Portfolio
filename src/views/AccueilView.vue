@@ -3,19 +3,19 @@
 
     <div class="mt-[2vh] 3xl:text-[8.5rem] text-[5.5rem]">
         <div class="flex items-center justify-between h-[13vh] gap-5">
-            <h1 class="font-light  text-[#154d13] uppercase ">Digital</h1>
+            <h1 class="font-light  text-[#154d13] uppercase -mb-6">Digital</h1>
             <img src="../assets/bg1.png" alt="" class="3xl:w-full max-h-[12.5vh]">
         </div>
         <div class="flex items-center justify-between h-[13vh] gap-5 ">
-            <h1 class="font-light  text-[#154d13] uppercase ">Designer</h1>
+            <h1 class="font-light  text-[#154d13] uppercase -mb-6">Designer</h1>
             <img src="../assets/bg2.png" alt="" class="3xl:w-full max-h-[12.5vh]">
         </div>
         <div class="flex items-center justify-between h-[13vh] gap-5 ">
-            <h1 class="font-light  text-[#154d13] uppercase ">Creative</h1>
+            <h1 class="font-light  text-[#154d13] uppercase -mb-6">Creative</h1>
             <img src="../assets/bg3.png" alt="" class="3xl:w-full max-h-[12.5vh]">
         </div>
         <div class="flex items-center justify-between h-[13vh] gap-5 ">
-            <h1 class="font-light  text-[#154d13] uppercase ">Developer</h1>
+            <h1 class="font-light  text-[#154d13] uppercase -mb-6">Developer</h1>
             <img src="../assets/bg4.png" alt="" class="3xl:w-full max-h-[12.5vh]">
         </div>
     </div>

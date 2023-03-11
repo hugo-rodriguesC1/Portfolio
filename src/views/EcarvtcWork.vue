@@ -1,31 +1,50 @@
+<script setup>
+import ButtonView from "../components/ButtonView.vue";
+</script>
+
+
 <template>
-    <div class="flex flex-col items-center">
-      <h1 class="text-[8.5rem] uppercase leading-none text-[#154d13] self-start">Autofill</h1>
-      <div class="mt-[2vh] flex w-full justify-between gap-[2vw] text-xl font-normal text-[#154d13]">
-        <div class="flex flex-1 flex-col">
-          <p>
-            Dans mon temps libre, j'ai développé une extension chrome. Il s'agit d'un autofill pour le site Supreme. L'extension remplit les
-            coordonnées et les informations de paiement de l'utilisateur lors du paiement de la commande.
-          </p>
-          <br />
-          <p>
-            Ce projet m'a permis de me familiariser avec les bases de JavaScript et m'a également apporté les notions élémentaires concernant
-            le développement d'extensions Chrome, notamment les différents types d'extensions mais également le "storage" qui permet de
-            stocker des données localement ou en ligne depuis l'extension.
-          </p>
-          <br />
-          <p>Le projet est téléchargeable depuis mon Github, avec le lien ci-dessous.</p>
-          <br>
-          <ButtonView>Github</ButtonView>
-        </div>
-        <div class="flex flex-1 gap-[2vw] flex-col lg:flex-row">
-          <div class="flex flex-1 flex-grow"><img src="../assets/" alt="" class="w-full object-contain" /></div>
-        </div>
+  <div class="flex flex-col items-center">
+    <div id="anchor" class="absolute top-0"></div>
+    <a
+      href="#anchor"
+      class="fixed bottom-20 right-[5vw] flex h-14 w-14 items-center justify-center bg-[#154d13] text-xl font-normal text-white opacity-50 transition-all hover:h-16 hover:w-16 hover:opacity-100"
+      >TOP</a
+    >
+
+    <h1 class="self-start text-[8.5rem] uppercase leading-none text-[#154d13]">EcarVTC</h1>
+    <div class="flex justify-between gap-10 text-xl font-normal text-[#154d13]">
+      <div class="flex flex-1 flex-col">
+        <p>
+          This is the project of the second year of BUT MMI. With three classmates, we worked for a private driver to design his website. I
+          did the web develoment part of the project. The website is responsive and allows to book a travel directly online. 
+        </p>
+        <br />
+        <p>
+          I used Wordpress to create the website. I also create a custom Wordpress theme. This project allowed me to learn how Wordpress
+          themes work. The private driver needed an online booking system on the website so I used a Wordpress plugin which works with 
+          Google Maps API, and online payment platforms to implement such a functionality on the website.
+        </p>
+        <br>
+        <ButtonView text="website" link="https://e-car-vtc.fr/"/>
+      </div>
+      <div class="flex flex-1 flex-col">
+        <img src="../assets/Ecarvtc/ecar1.png" alt="" class="small" />
       </div>
     </div>
-  </template>
-  
-  <script setup>
-  import ButtonView from '../components/ButtonView.vue';
-  
-  </script>
+
+    <div class="flex items-center justify-between gap-10 text-xl font-normal text-[#154d13] my-10">
+      <div class="flex flex-1 flex-col">
+        <img src="../assets/Ecarvtc/ecar2.png" alt="" />
+      </div>
+      <div class="flex flex-1 flex-col">
+        <img src="../assets/Ecarvtc/ecar3.png" alt="" />
+      </div>
+      <div class="flex flex-1 flex-col">
+        <img src="../assets/Ecarvtc/ecar4.png" alt="" />
+      </div>
+
+    </div>
+  </div>
+</template>
+
