@@ -1,5 +1,5 @@
 <template>
-  <div>    
+  <div class="mt-[22vh]">    
 
     <div class="mt-[2vh] 3xl:text-[8.5rem] text-[5.5rem]">
         <div class="flex items-center justify-between h-[13vh] gap-5">

@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@heroicons/vue": "^1.0.6",
+    "@luxdamore/vue-cursor-fx": "^1.6.2",
     "curtainsjs": "^8.1.4",
     "vue": "^3.2.33",
     "vue-router": "^4.0.14"
