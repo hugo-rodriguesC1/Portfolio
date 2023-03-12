@@ -9,7 +9,7 @@ import { onMounted } from "vue";
     <a href="#anchor" class="fixed bottom-20 right-[5vw] bg-[#154d13] opacity-50 w-14 h-14 flex justify-center items-center font-normal text-xl text-white hover:opacity-100 hover:w-16 hover:h-16 transition-all">TOP</a>
 
     <h1 class="self-start text-[8.5rem] uppercase leading-none text-[#154d13]">DL44</h1>
-    <div class="flex justify-between gap-10 text-xl font-normal text-[#154d13]">
+    <div class="flex justify-between gap-10 text-xl font-normal text-[#154d13] mt-[2vh]">
       <div class="flex flex-1 flex-col">
         <p>
           This is my first creation with Blender. In the same time, I was developping a star wars based video game, so I decided to model

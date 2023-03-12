@@ -1,44 +1,11 @@
-<template>
-  <div class="mt-[22vh]">    
-
-    <div class="mt-[2vh] 3xl:text-[8.5rem] text-[5.5rem]">
-        <div class="flex items-center justify-between h-[13vh] gap-5">
-            <h1 class="font-light  text-[#154d13] uppercase -mb-6">Digital</h1>
-            <img src="../assets/bg1.png" alt="" class="3xl:w-full max-h-[12.5vh]">
-        </div>
-        <div class="flex items-center justify-between h-[13vh] gap-5 ">
-            <h1 class="font-light  text-[#154d13] uppercase -mb-6">Designer</h1>
-            <img src="../assets/bg2.png" alt="" class="3xl:w-full max-h-[12.5vh]">
-        </div>
-        <div class="flex items-center justify-between h-[13vh] gap-5 ">
-            <h1 class="font-light  text-[#154d13] uppercase -mb-6">Creative</h1>
-            <img src="../assets/bg3.png" alt="" class="3xl:w-full max-h-[12.5vh]">
-        </div>
-        <div class="flex items-center justify-between h-[13vh] gap-5 ">
-            <h1 class="font-light  text-[#154d13] uppercase -mb-6">Developer</h1>
-            <img src="../assets/bg4.png" alt="" class="3xl:w-full max-h-[12.5vh]">
-        </div>
-    </div>
-
-    <div id="container" class="relative mt-7">
-      <div id="canvas" class="w-[90vw] h-[15vh] fixed inset-auto z-10"></div>
-      <div id="flowmap" class=" w-[90vw] h-[15vh]">
-        <img src="../assets/grid.jpg" class="w-[90vw] h-[15vh]" crossorigin="" data-sampler="planeTexture" />
-      </div>
-    </div>
-
-    
-
-  </div>
-</template>
-
-
-
 <script setup>
 
 import { Curtains, Plane, Vec2, PingPongPlane } from "curtainsjs";
+import { onMounted, ref } from "vue";
+
 
 window.addEventListener("load", () => {
+
     const curtains = new Curtains({
         container: "canvas",
         antialias: false, // render targets will disable default antialiasing anyway
@@ -349,4 +316,62 @@ window.addEventListener("load", () => {
         fromTexture: flowMap.getTexture() // set it based on our PingPongPlane flowmap plane's texture
     });
 });
+let isLoading=ref(true);
+
+onMounted(()=>{
+    setTimeout(() => {
+        isLoading.value=false
+    }, 1100);
+})
+
 </script>
+
+
+<template>
+  <div class="mt-[22vh]">    
+
+    <div v-if="isLoading" class="loader absolute top-0 left-0 w-screen h-screen bg-[#D3D1CC] z-50 flex justify-center items-center">
+        <div class="w-20 h-20 animate-ping"></div>
+    </div>
+
+    <div class="mt-[2vh] 3xl:text-[8.5rem] text-[5.5rem]">
+        <div class="flex items-center justify-between h-[13vh] gap-5">
+            <h1 class="font-light  text-[#154d13] uppercase -mb-6">Digital</h1>
+            <img src="../assets/test1.gif" alt="" class="3xl:w-full max-h-[12.5vh]">
+        </div>
+        <div class="flex items-center justify-between h-[13vh] gap-5 ">
+            <h1 class="font-light  text-[#154d13] uppercase -mb-6">Designer</h1>
+            <img src="../assets/test2.gif" alt="" class="3xl:w-full max-h-[12.5vh]">
+        </div>
+        <div class="flex items-center justify-between h-[13vh] gap-5 ">
+            <h1 class="font-light  text-[#154d13] uppercase -mb-6">Creative</h1>
+            <img src="../assets/test3.gif" alt="" class="3xl:w-full max-h-[12.5vh]">
+        </div>
+        <div class="flex items-center justify-between h-[13vh] gap-5 ">
+            <h1 class="font-light  text-[#154d13] uppercase -mb-6">Developer</h1>
+            <img src="../assets/test4.gif" alt="" class="3xl:w-full max-h-[12.5vh]">
+        </div>
+    </div>
+
+    <div id="container" class="relative mt-7">
+      <div id="canvas" class="w-[90vw] h-[15vh] fixed inset-auto z-10"></div>
+      <div id="flowmap" class=" w-[90vw] h-[15vh]">
+        <img src="../assets/grid.jpg" class="w-[90vw] h-[15vh]" crossorigin="" data-sampler="planeTexture" />
+      </div>
+    </div>
+
+    
+
+  </div>
+</template>
+
+<style>
+
+.loader div {
+    background-image: url(../assets/bg2.png);
+}
+
+</style>
+
+
+

@@ -13,7 +13,7 @@ import ButtonView from "../components/ButtonView.vue";
     >
 
     <h1 class="self-start text-[8.5rem] uppercase leading-none text-[#154d13]">EcarVTC</h1>
-    <div class="flex justify-between gap-10 text-xl font-normal text-[#154d13]">
+    <div class="flex justify-between gap-10 text-xl font-normal text-[#154d13] mt-[2vh]">
       <div class="flex flex-1 flex-col">
         <p>
           This is the project of the second year of BUT MMI. With three classmates, we worked for a private driver to design his website. I

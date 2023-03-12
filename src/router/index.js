@@ -6,6 +6,7 @@ import EcarvtcWork from "../views/EcarvtcWork.vue";
 import AutofillWork from "../views/AutofillWork.vue";
 import BlendupWork from "../views/BlendupWork.vue";
 import Dl44Work from "../views/Dl44Work.vue";
+import DatavizWork from "../views/DatavizWork.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -17,6 +18,7 @@ const router = createRouter({
     { path: "/autofillwork", name: "Autofill", component: AutofillWork },
     { path: "/blendupwork", name: "Blendup", component: BlendupWork },
     { path: "/dl44work", name: "Dl44", component: Dl44Work },
+    { path: "/datavizwork", name: "Dataviz", component: DatavizWork },
     // ici les autre routes
   ],
 });
