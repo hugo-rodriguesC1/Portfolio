@@ -12,10 +12,10 @@ function Refresh() {
   <div>
     <div class="noise"></div>
     <div
-      class="fixed top-0 left-0 right-0 mx-[5vw] mt-[7.5vh] flex items-center justify-between border-2 border-white bg-[#D3D1CC] py-6 px-10 text-3xl font-light text-[#154D13] 3xl:p-8"
+      class="fixed top-0 left-0 right-0 mx-[5vw] mt-[7.5vh] flex items-center justify-between border-2 border-white bg-[#D3D1CC] py-3 px-5 xl:py-6 xl:px-10 xl:text-3xl text-xl font-light text-[#154D13] 3xl:p-8"
     >
       <router-link to="/work" class="before:w-full before:h-full before:rounded-sm before:opacity-0 before:transition-all transition-all before:absolute before:top-0 before:hover:opacity-100 relative p-4 before:left-0 before:right-0 before:bg-[url(./assets/bg3.png)] before:bg-cover hover:text-white before:-z-10">work</router-link>
-      <router-link to="/" @click="Refresh()" class="my-2 flex items-center justify-center text-xl font-normal text-[#154d13] relative before:transition-all after:transition-all" id="home"
+      <router-link to="/" @click="Refresh()" class="text-center my-2 flex items-center justify-center xl:text-xl text-base font-normal text-[#154d13] relative before:transition-all after:transition-all" id="home"
         >Hugo Rodrigues</router-link
       >
       <router-link to="/contact" class="before:w-full before:h-full before:rounded-sm before:opacity-0 before:transition-all transition-all before:absolute before:top-0 before:hover:opacity-100 relative p-4 before:left-0 before:right-0 before:bg-[url(./assets/bg3.png)] before:bg-cover hover:text-white before:-z-10">contact</router-link>
@@ -29,8 +29,10 @@ function Refresh() {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
   content: "";
   opacity: 0.08;
   z-index: 100;

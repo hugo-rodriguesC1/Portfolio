@@ -334,26 +334,28 @@ onMounted(()=>{
         <div class="w-20 h-20 animate-ping"></div>
     </div>
 
-    <div class="mt-[2vh] 3xl:text-[8.5rem] text-[5.5rem]">
-        <div class="flex items-center justify-between h-[13vh] gap-5">
+    <div class="mt-[2vh] 2xl:text-[8.5rem] xl:text-[6.5rem] lg:text-[5rem] sm:text-[4rem] text-[3.5rem]">
+        <div class="flex items-center justify-between md:h-[13vh] gap-5">
             <h1 class="font-light  text-[#154d13] uppercase -mb-6">Digital</h1>
-            <img src="../assets/test1.gif" alt="" class="3xl:w-full max-h-[12.5vh]">
+            <img src="../assets/test1.gif" alt="" class="w-full lg:max-h-[12.5vh] max-h-[11vh] hidden sm:block">
         </div>
-        <div class="flex items-center justify-between h-[13vh] gap-5 ">
+        <div class="flex items-center justify-between md:h-[13vh] gap-5 ">
             <h1 class="font-light  text-[#154d13] uppercase -mb-6">Designer</h1>
-            <img src="../assets/test2.gif" alt="" class="3xl:w-full max-h-[12.5vh]">
+            <img src="../assets/test2.gif" alt="" class="w-full lg:max-h-[12.5vh] max-h-[11vh] hidden sm:block">
         </div>
-        <div class="flex items-center justify-between h-[13vh] gap-5 ">
+        <div class="flex items-center justify-between md:h-[13vh] gap-5 ">
             <h1 class="font-light  text-[#154d13] uppercase -mb-6">Creative</h1>
-            <img src="../assets/test3.gif" alt="" class="3xl:w-full max-h-[12.5vh]">
+            <img src="../assets/test3.gif" alt="" class="w-full lg:max-h-[12.5vh] max-h-[11vh] hidden sm:block">
         </div>
-        <div class="flex items-center justify-between h-[13vh] gap-5 ">
+        <div class="flex items-center justify-between md:h-[13vh] gap-5 ">
             <h1 class="font-light  text-[#154d13] uppercase -mb-6">Developer</h1>
-            <img src="../assets/test4.gif" alt="" class="3xl:w-full max-h-[12.5vh]">
+            <img src="../assets/test4.gif" alt="" class="w-full lg:max-h-[12.5vh] max-h-[11vh] hidden sm:block">
         </div>
     </div>
 
-    <div id="container" class="relative mt-7">
+    
+
+    <div id="container" class="relative mt-6 hidden md:block">
       <div id="canvas" class="w-[90vw] h-[15vh] fixed inset-auto z-10"></div>
       <div id="flowmap" class=" w-[90vw] h-[15vh]">
         <img src="../assets/grid.jpg" class="w-[90vw] h-[15vh]" crossorigin="" data-sampler="planeTexture" />
