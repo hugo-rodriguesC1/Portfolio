@@ -10,8 +10,8 @@ import ButtonView from "../components/ButtonView.vue";
     <a href="#anchor" class="fixed bottom-20 right-[5vw] bg-[#154d13] opacity-50 w-14 h-14 flex justify-center items-center font-normal text-xl text-white hover:opacity-100 hover:w-16 hover:h-16 transition-all">TOP</a>
 
 
-    <h1 class="self-start text-[8.5rem] uppercase leading-none text-[#154d13]">BlendUp</h1>
-    <div class="flex justify-between gap-10 text-xl font-normal text-[#154d13] mt-[2vh]">
+    <h1 class="self-start text-[3.5rem] sm:text-[4rem] md:text-[4.5rem] lg:text-[5rem] xl:text-[6.5rem] 2xl:text-[8.5rem] uppercase leading-none text-[#154d13]">BlendUp</h1>
+    <div class="flex flex-col xs:flex-row justify-between gap-10 text-xl font-normal text-[#154d13] mt-[2vh]">
       <div class="flex flex-1 flex-col">
         <p>
           This Website was created during an exam in my first year of BUT MMI. The goal was to imagine a music festival with all its graphic
@@ -45,7 +45,7 @@ import ButtonView from "../components/ButtonView.vue";
       have also set up an admin part of the website where I can directly add, modify or delete artists or sessions on the website
     </p>
 
-    <div class="flex items-center justify-between gap-10 text-xl font-normal text-[#154d13] mb-10">
+    <div class="flex flex-col lg:flex-row items-center justify-between gap-10 text-xl font-normal text-[#154d13] mb-10">
       <div class="flex flex-1 flex-col">
         <img src="../assets/Blendup/pages1.png" alt="" />
       </div>

@@ -12,8 +12,8 @@ import ButtonView from "../components/ButtonView.vue";
       >TOP</a
     >
 
-    <h1 class="self-start text-[8.5rem] uppercase leading-none text-[#154d13]">EcarVTC</h1>
-    <div class="flex justify-between gap-10 text-xl font-normal text-[#154d13] mt-[2vh]">
+    <h1 class="self-start text-[3.5rem] sm:text-[4rem] md:text-[4.5rem] lg:text-[5rem] xl:text-[6.5rem] 2xl:text-[8.5rem] uppercase leading-none text-[#154d13]">EcarVTC</h1>
+    <div class="flex flex-col lg:flex-row justify-between gap-10 text-xl font-normal text-[#154d13] mt-[2vh]">
       <div class="flex flex-1 flex-col">
         <p>
           This is the project of the second year of BUT MMI. With three classmates, we worked for a private driver to design his website. I
@@ -33,7 +33,7 @@ import ButtonView from "../components/ButtonView.vue";
       </div>
     </div>
 
-    <div class="flex items-center justify-between gap-10 text-xl font-normal text-[#154d13] my-10">
+    <div class="flex flex-col lg:flex-row items-center justify-between gap-10 text-xl font-normal text-[#154d13] my-10">
       <div class="flex flex-1 flex-col">
         <img src="../assets/Ecarvtc/ecar2.png" alt="" />
       </div>

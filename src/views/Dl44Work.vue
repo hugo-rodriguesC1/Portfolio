@@ -8,8 +8,8 @@ import { onMounted } from "vue";
     <div id="anchor" class="absolute top-0"></div>
     <a href="#anchor" class="fixed bottom-20 right-[5vw] bg-[#154d13] opacity-50 w-14 h-14 flex justify-center items-center font-normal text-xl text-white hover:opacity-100 hover:w-16 hover:h-16 transition-all">TOP</a>
 
-    <h1 class="self-start text-[8.5rem] uppercase leading-none text-[#154d13]">DL44</h1>
-    <div class="flex justify-between gap-10 text-xl font-normal text-[#154d13] mt-[2vh]">
+    <h1 class="self-start text-[3.5rem] sm:text-[4rem] md:text-[4.5rem] lg:text-[5rem] xl:text-[6.5rem] 2xl:text-[8.5rem] uppercase leading-none text-[#154d13]">DL44</h1>
+    <div class="flex flex-col md:flex-row justify-between gap-10 text-xl font-normal text-[#154d13] mt-[2vh]">
       <div class="flex flex-1 flex-col">
         <p>
           This is my first creation with Blender. In the same time, I was developping a star wars based video game, so I decided to model
@@ -27,7 +27,7 @@ import { onMounted } from "vue";
       </div>
     </div>
 
-    <div class="flex items-center justify-between gap-10 text-xl font-normal text-[#154d13] my-10">
+    <div class="flex flex-col sm:flex-row items-center justify-between gap-10 text-xl font-normal text-[#154d13] my-10">
       <div class="flex flex-1 flex-col">
         <img src="../assets/Dl44/step1.png" alt="" />
       </div>

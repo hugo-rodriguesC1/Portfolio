@@ -12,8 +12,8 @@ import ButtonView from "../components/ButtonView.vue";
       >TOP</a
     >
 
-    <h1 class="self-start text-[8.5rem] uppercase leading-none text-[#154d13]">Data visualization</h1>
-    <div class="flex justify-between gap-10 text-xl font-normal text-[#154d13] mt-[2vh]">
+    <h1 class="self-start text-[3.5rem] sm:text-[4rem] md:text-[4.5rem] lg:text-[5rem] xl:text-[6.5rem] 2xl:text-[8.5rem] uppercase leading-none text-[#154d13]">Data visualization</h1>
+    <div class="flex flex-col lg:flex-row justify-between gap-10 text-xl font-normal text-[#154d13] mt-[2vh]">
       <div class="flex flex-1 flex-col">
         <p>
           This site was created as part of an exam of the BUT MMI 2nd year. The objective was to develop a data visualization website.
@@ -32,7 +32,7 @@ import ButtonView from "../components/ButtonView.vue";
       </div>
     </div>
 
-    <div class="my-10 flex items-center justify-between gap-10 text-xl font-normal text-[#154d13]">
+    <div class="my-10 flex flex-col md:flex-row items-center justify-between gap-10 text-xl font-normal text-[#154d13]">
       <div class="flex flex-1 flex-col">
         <img src="../assets/Dataviz/viz2.png" alt="" />
       </div>

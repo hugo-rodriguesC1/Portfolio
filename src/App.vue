@@ -20,7 +20,7 @@ function Refresh() {
       >
       <router-link to="/contact" class="before:w-full before:h-full before:rounded-sm before:opacity-0 before:transition-all transition-all before:absolute before:top-0 before:hover:opacity-100 relative p-4 before:left-0 before:right-0 before:bg-[url(./assets/bg3.png)] before:bg-cover hover:text-white before:-z-10">contact</router-link>
     </div>
-    <router-view class="mx-[5vw] mt-[19vh] sm:mt-[25vh] 3xl:mt-[23vh] mb-20 w-auto"></router-view>
+    <router-view class="mx-[5vw] mt-40 sm:mt-48 xl:mt-56 mb-20 w-auto"></router-view>
   </div>
 </template>
 
