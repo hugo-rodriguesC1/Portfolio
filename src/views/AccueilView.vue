@@ -1,68 +1,66 @@
 <script setup>
-
 import { Curtains, Plane, Vec2, PingPongPlane } from "curtainsjs";
 import { onMounted, ref } from "vue";
 
-
 window.addEventListener("load", () => {
-
-    const curtains = new Curtains({
-        container: "canvas",
-        antialias: false, // render targets will disable default antialiasing anyway
-        pixelRatio: Math.min(1.5, window.devicePixelRatio) // limit pixel ratio for performance
-    }).onError(() => {
-        // we will add a class to the document body to display original images
-        document.body.classList.add("no-curtains");
-    }).onContextLost(() => {
-        // on context lost, try to restore the context
-        curtains.restoreContext();
+  const curtains = new Curtains({
+    container: "canvas",
+    antialias: false, // render targets will disable default antialiasing anyway
+    pixelRatio: Math.min(1.5, window.devicePixelRatio), // limit pixel ratio for performance
+  })
+    .onError(() => {
+      // we will add a class to the document body to display original images
+      document.body.classList.add("no-curtains");
+    })
+    .onContextLost(() => {
+      // on context lost, try to restore the context
+      curtains.restoreContext();
     });
 
+  // mouse/touch move
+  const ww = window.innerWidth;
+  const wh = window.innerHeight;
 
-    // mouse/touch move
-    const ww = window.innerWidth
-    const wh = window.innerHeight
+  console.log(ww);
 
-    console.log(ww)
-    
-    const mouse = new Vec2(ww / 2, wh / 2);
-    const lastMouse = mouse.clone();
-    const velocity = new Vec2();
+  const mouse = new Vec2(ww / 2, wh / 2);
+  const lastMouse = mouse.clone();
+  const velocity = new Vec2();
 
-    function onMouseMove(e) {
-        // velocity is our mouse position minus our mouse last position
-        lastMouse.copy(mouse);
+  function onMouseMove(e) {
+    // velocity is our mouse position minus our mouse last position
+    lastMouse.copy(mouse);
 
-        // touch event
-        if(e.targetTouches) {
-            mouse.set(e.targetTouches[0].clientX, e.targetTouches[0].clientY);
-        }
-        // mouse event
-        else {
-            mouse.set(e.clientX, e.clientY);
-        }
-
-        // divided by a frame duration (roughly)
-        velocity.set((mouse.x - lastMouse.x) / 16, (mouse.y - lastMouse.y) / 16);
-
-        // we should update the velocity
-        updateVelocity = true;
+    // touch event
+    if (e.targetTouches) {
+      mouse.set(e.targetTouches[0].clientX, e.targetTouches[0].clientY);
+    }
+    // mouse event
+    else {
+      mouse.set(e.clientX, e.clientY);
     }
 
-    window.addEventListener("mousemove", onMouseMove);
-    window.addEventListener("touchmove", onMouseMove, {
-        passive: true
-    });
+    // divided by a frame duration (roughly)
+    velocity.set((mouse.x - lastMouse.x) / 16, (mouse.y - lastMouse.y) / 16);
 
-    // if we should update the velocity or not
-    let updateVelocity = false;
+    // we should update the velocity
+    updateVelocity = true;
+  }
 
-    // we'll be using this html element to create 2 planes
-    const planeElement = document.getElementById("flowmap");
+  window.addEventListener("mousemove", onMouseMove);
+  window.addEventListener("touchmove", onMouseMove, {
+    passive: true,
+  });
 
-    // creating our PingPongPlane flowmap plane
-    // flowmap shaders
-    const flowmapVs = `
+  // if we should update the velocity or not
+  let updateVelocity = false;
+
+  // we'll be using this html element to create 2 planes
+  const planeElement = document.getElementById("flowmap");
+
+  // creating our PingPongPlane flowmap plane
+  // flowmap shaders
+  const flowmapVs = `
         #ifdef GL_FRAGMENT_PRECISION_HIGH
         precision highp float;
         #else
@@ -92,7 +90,7 @@ window.addEventListener("load", () => {
         }
     `;
 
-    const flowmapFs = `
+  const flowmapFs = `
         #ifdef GL_FRAGMENT_PRECISION_HIGH
         precision highp float;
         #else
@@ -150,85 +148,86 @@ window.addEventListener("load", () => {
         }
     `;
 
-    // note the use of half float texture and the custom sampler name used in our fragment shader
-    const flowMapParams = {
-        sampler: "uFlowMap",
-        vertexShader: flowmapVs,
-        fragmentShader: flowmapFs,
-        texturesOptions: {
-            floatingPoint: "half-float" // use half float texture when possible
-        },
-        uniforms: {
-            mousePosition: {
-                name: "uMousePosition",
-                type: "2f",
-                value: mouse,
-            },
-            // size of the cursor
-            fallOff: {
-                name: "uFalloff",
-                type: "1f",
-                value: ww > wh ? ww / 7500 : wh / 5000,
-            },
-            // how much the cursor should grow with time
-            cursorGrow: {
-                name: "uCursorGrow",
-                type: "1f",
-                value: 1.15,
-            },
-            // alpha of the cursor
-            alpha: {
-                name: "uAlpha",
-                type: "1f",
-                value: 1,
-            },
-            // how much the cursor must dissipate over time (ie trail length)
-            // closer to 1 = no dissipation
-            dissipation: {
-                name: "uDissipation",
-                type: "1f",
-                value: 0.925,
-            },
-            // our velocity
-            velocity: {
-                name: "uVelocity",
-                type: "2f",
-                value: velocity,
-            },
-            // window aspect ratio to draw a circle
-            aspect: {
-                name: "uAspect",
-                type: "1f",
-                value: ww / wh,
-            },
-        },
-    };
+  // note the use of half float texture and the custom sampler name used in our fragment shader
+  const flowMapParams = {
+    sampler: "uFlowMap",
+    vertexShader: flowmapVs,
+    fragmentShader: flowmapFs,
+    texturesOptions: {
+      floatingPoint: "half-float", // use half float texture when possible
+    },
+    uniforms: {
+      mousePosition: {
+        name: "uMousePosition",
+        type: "2f",
+        value: mouse,
+      },
+      // size of the cursor
+      fallOff: {
+        name: "uFalloff",
+        type: "1f",
+        value: ww > wh ? ww / 7500 : wh / 5000,
+      },
+      // how much the cursor should grow with time
+      cursorGrow: {
+        name: "uCursorGrow",
+        type: "1f",
+        value: 1.15,
+      },
+      // alpha of the cursor
+      alpha: {
+        name: "uAlpha",
+        type: "1f",
+        value: 1,
+      },
+      // how much the cursor must dissipate over time (ie trail length)
+      // closer to 1 = no dissipation
+      dissipation: {
+        name: "uDissipation",
+        type: "1f",
+        value: 0.925,
+      },
+      // our velocity
+      velocity: {
+        name: "uVelocity",
+        type: "2f",
+        value: velocity,
+      },
+      // window aspect ratio to draw a circle
+      aspect: {
+        name: "uAspect",
+        type: "1f",
+        value: ww / wh,
+      },
+    },
+  };
 
-    // our ping pong plane
-    const flowMap = new PingPongPlane(curtains, planeElement, flowMapParams);
+  // our ping pong plane
+  const flowMap = new PingPongPlane(curtains, planeElement, flowMapParams);
 
-    flowMap.onRender(() => {
-        // update mouse position
-        flowMap.uniforms.mousePosition.value = flowMap.mouseToPlaneCoords(mouse);
+  flowMap
+    .onRender(() => {
+      // update mouse position
+      flowMap.uniforms.mousePosition.value = flowMap.mouseToPlaneCoords(mouse);
 
-        // update velocity
-        if(!updateVelocity) {
-            velocity.set(curtains.lerp(velocity.x, 0, 0.5), curtains.lerp(velocity.y, 0, 0.5));
-        }
-        updateVelocity = false;
+      // update velocity
+      if (!updateVelocity) {
+        velocity.set(curtains.lerp(velocity.x, 0, 0.5), curtains.lerp(velocity.y, 0, 0.5));
+      }
+      updateVelocity = false;
 
-        flowMap.uniforms.velocity.value = new Vec2(curtains.lerp(velocity.x, 0, 0.1), curtains.lerp(velocity.y, 0, 0.1));
-    }).onAfterResize(() => {
-        // update our window aspect ratio uniform
-        const boundingRect = flowMap.getBoundingRect();
-        flowMap.uniforms.aspect.value = boundingRect.width / boundingRect.height;
-        flowMap.uniforms.fallOff.value = boundingRect.width > boundingRect.height ? boundingRect.width / 30000 : boundingRect.height / 20000;
+      flowMap.uniforms.velocity.value = new Vec2(curtains.lerp(velocity.x, 0, 0.1), curtains.lerp(velocity.y, 0, 0.1));
+    })
+    .onAfterResize(() => {
+      // update our window aspect ratio uniform
+      const boundingRect = flowMap.getBoundingRect();
+      flowMap.uniforms.aspect.value = boundingRect.width / boundingRect.height;
+      flowMap.uniforms.fallOff.value = boundingRect.width > boundingRect.height ? boundingRect.width / 30000 : boundingRect.height / 20000;
     });
 
-
-    // now use the texture of our ping pong plane in the plane that will actually be displayed
-    // displacement shaders
-    const displacementVs = `
+  // now use the texture of our ping pong plane in the plane that will actually be displayed
+  // displacement shaders
+  const displacementVs = `
         #ifdef GL_FRAGMENT_PRECISION_HIGH
         precision highp float;
         #else
@@ -262,7 +261,7 @@ window.addEventListener("load", () => {
         }
     `;
 
-    const displacementFs = `
+  const displacementFs = `
         #ifdef GL_FRAGMENT_PRECISION_HIGH
         precision highp float;
         #else
@@ -301,79 +300,73 @@ window.addEventListener("load", () => {
         }
     `;
 
-    // next we will create the plane that will actually display our end result
-    // which means the image texture that will be displaced using the ping pong FBO texture
-    const params = {
-        vertexShader: displacementVs,
-        fragmentShader: displacementFs,
-    };
+  // next we will create the plane that will actually display our end result
+  // which means the image texture that will be displaced using the ping pong FBO texture
+  const params = {
+    vertexShader: displacementVs,
+    fragmentShader: displacementFs,
+  };
 
-    const plane = new Plane(curtains, planeElement, params);
+  const plane = new Plane(curtains, planeElement, params);
 
-    // create a texture that will hold our flowmap
-    const flowTexture = plane.createTexture({
-        sampler: "uFlowTexture",
-        fromTexture: flowMap.getTexture() // set it based on our PingPongPlane flowmap plane's texture
-    });
+  // create a texture that will hold our flowmap
+  const flowTexture = plane.createTexture({
+    sampler: "uFlowTexture",
+    fromTexture: flowMap.getTexture(), // set it based on our PingPongPlane flowmap plane's texture
+  });
 });
-let isLoading=ref(true);
+let isLoading = ref(true);
 
-onMounted(()=>{
-    setTimeout(() => {
-        isLoading.value=false
-    }, 1100);
-})
-
+onMounted(() => {
+  setTimeout(() => {
+    isLoading.value = false;
+  }, 1100);
+});
 </script>
 
-
 <template>
-  <div class="mt-[22vh]">    
-
-    <div v-if="isLoading" class="loader absolute top-0 left-0 w-screen h-screen bg-[#D3D1CC] z-50 flex justify-center items-center">
-        <div class="w-20 h-20 animate-ping"></div>
+  <div class="mt-[22vh]">
+    <div v-if="isLoading" class="loader absolute top-0 left-0 z-50 flex h-screen w-screen items-center justify-center bg-[#D3D1CC]">
+      <div class="h-20 w-20 animate-ping"></div>
     </div>
 
-    <div class="mt-[2vh] 2xl:text-[8.5rem] xl:text-[6.5rem] lg:text-[5rem] sm:text-[4rem] text-[3.5rem]">
-        <div class="flex items-center justify-between md:h-[13vh] gap-5">
-            <h1 class="font-light  text-[#154d13] uppercase -mb-6">Digital</h1>
-            <img src="../assets/test1.gif" alt="" class="w-full lg:max-h-[12.5vh] max-h-[11vh] hidden sm:block">
-        </div>
-        <div class="flex items-center justify-between md:h-[13vh] gap-5 ">
-            <h1 class="font-light  text-[#154d13] uppercase -mb-6">Designer</h1>
-            <img src="../assets/test2.gif" alt="" class="w-full lg:max-h-[12.5vh] max-h-[11vh] hidden sm:block">
-        </div>
-        <div class="flex items-center justify-between md:h-[13vh] gap-5 ">
-            <h1 class="font-light  text-[#154d13] uppercase -mb-6">Creative</h1>
-            <img src="../assets/test3.gif" alt="" class="w-full lg:max-h-[12.5vh] max-h-[11vh] hidden sm:block">
-        </div>
-        <div class="flex items-center justify-between md:h-[13vh] gap-5 ">
-            <h1 class="font-light  text-[#154d13] uppercase -mb-6">Developer</h1>
-            <img src="../assets/test4.gif" alt="" class="w-full lg:max-h-[12.5vh] max-h-[11vh] hidden sm:block">
-        </div>
-    </div>
-
-    
-
-    <div id="container" class="relative mt-6 hidden md:block">
-      <div id="canvas" class="w-[90vw] h-[15vh] fixed inset-auto z-10"></div>
-      <div id="flowmap" class=" w-[90vw] h-[15vh]">
-        <img src="../assets/grid.jpg" class="w-[90vw] h-[15vh]" crossorigin="" data-sampler="planeTexture" />
+    <div class="mt-[2vh] text-[3.5rem] sm:text-[4rem] md:text-[4.5rem] lg:text-[5rem] xl:text-[6.5rem] 2xl:text-[8.5rem]">
+      <div class="flex items-center justify-between gap-5 md:h-[13vh] mt-0 md:-mt-10 lg:mt-0">
+        <h1 class="-mb-6 font-light uppercase text-[#154d13]">Digital</h1>
+        <img src="../assets/test1.gif" alt="dégradé de couleur animé" class="hidden max-h-[11vh] w-full sm:block lg:max-h-[12.5vh] max-w-[33vw] lg:max-w-none" />
+      </div>
+      <div class="flex items-center justify-between gap-5 md:h-[13vh] mt-0 md:-mt-10 : lg:mt-0">
+        <h1 class="-mb-6 font-light uppercase text-[#154d13]">Designer</h1>
+        <img src="../assets/test2.gif" alt="dégradé de couleur animé" class="hidden max-h-[11vh] w-full sm:block lg:max-h-[12.5vh] max-w-[33vw] lg:max-w-none" />
+      </div>
+      <div class="flex items-center justify-between gap-5 md:h-[13vh] mt-0 md:-mt-10 lg:mt-0">
+        <h1 class="-mb-6 font-light uppercase text-[#154d13]">Creative</h1>
+        <img src="../assets/test3.gif" alt="dégradé de couleur animé" class="hidden max-h-[11vh] w-full sm:block lg:max-h-[12.5vh] max-w-[33vw] lg:max-w-none" />
+      </div>
+      <div class="flex items-center justify-between gap-5 md:h-[13vh] mt-0 md:-mt-10 lg:mt-0">
+        <h1 class="-mb-6 font-light uppercase text-[#154d13]">Developer</h1>
+        <img src="../assets/test4.gif" alt="dégradé de couleur animé" class="hidden max-h-[11vh] w-full sm:block lg:max-h-[12.5vh] max-w-[33vw] lg:max-w-none" />
       </div>
     </div>
 
-    
+    <div class="flex flex-col mt-5 gap-1 items-center justify-center sm:hidden">
+        <img src="../assets/test1.gif" alt="dégradé de couleur animé" />
+        <img src="../assets/test2.gif" alt="dégradé de couleur animé" />
+        <img src="../assets/test3.gif" alt="dégradé de couleur animé" />
+        <img src="../assets/test4.gif" alt="dégradé de couleur animé" />
+    </div>
 
+    <div id="container" class="relative mt-6 hidden sm:block ">
+      <div id="canvas" class="fixed inset-auto z-10 h-[15vh] w-[90vw]"></div>
+      <div id="flowmap" class="h-[15vh] w-[90vw]">
+        <img src="../assets/grid.jpg" class="h-[15vh] w-[90vw]" crossorigin="" data-sampler="planeTexture" />
+      </div>
+    </div>
   </div>
 </template>
 
 <style>
-
 .loader div {
-    background-image: url(../assets/bg2.png);
+  background-image: url(../assets/bg2.png);
 }
-
 </style>
-
-
-
