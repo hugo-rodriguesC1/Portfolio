@@ -41,8 +41,9 @@
 
     <div class="my-7 h-0.5 w-full bg-[#154d13]"></div>
 
-    <router-link to="/datavizwork" class="flex flex-col md:flex-row md:items-center gap-[2vw] uppercase leading-none text-[#154d13]">
-      <h2 class="xl:text-[7rem] 3xl:text-[8.5rem] text-[4rem]">Boxe&nbsp;Game</h2>
+    <router-link to="/boxegamework" class="flex flex-col md:flex-row md:items-center gap-[2vw] uppercase leading-none text-[#154d13]">
+      <h2 class="xl:text-[7rem] 3xl:text-[8.5rem] text-[4rem] hidden sm:block">Boxe&nbsp;Game</h2>
+      <h2 class="xl:text-[7rem] 3xl:text-[8.5rem] text-[4rem] sm:hidden">Boxe Game</h2>
       <div class="xl:text-2xl text-lg leading-none">Robot boxing game made in unreal engine 5 in 3 days</div>
     </router-link>
   </div>

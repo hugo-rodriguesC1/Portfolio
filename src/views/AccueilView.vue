@@ -330,6 +330,10 @@ onMounted(() => {
       <div class="h-20 w-20 animate-ping"></div>
     </div>
 
+    <div class="flex flex-col mt-5 gap-1 items-center justify-center sm:hidden">
+        <img src="../assets/test1.gif" alt="dégradé de couleur animé" />
+    </div>
+
     <div class="mt-[2vh] text-[3.5rem] sm:text-[4rem] md:text-[4.5rem] lg:text-[5rem] xl:text-[6.5rem] 3xl:text-[8.5rem]">
       <div class="flex items-center justify-between gap-5 md:h-[13vh] mt-0 md:-mt-5 lg:mt-0">
         <h1 class="-mb-6 font-light uppercase text-[#154d13]">Digital</h1>
@@ -350,7 +354,6 @@ onMounted(() => {
     </div>
 
     <div class="flex flex-col mt-5 gap-1 items-center justify-center sm:hidden">
-        <img src="../assets/test1.gif" alt="dégradé de couleur animé" />
         <img src="../assets/test2.gif" alt="dégradé de couleur animé" />
         <img src="../assets/test3.gif" alt="dégradé de couleur animé" />
         <img src="../assets/test4.gif" alt="dégradé de couleur animé" />

@@ -21,6 +21,10 @@ import { onMounted } from "vue";
           <div>rodrig.hugo90@gmail.com</div>
         </div>
         <div class="flex gap-6 items-center">
+          <div class="relative"><img src="../assets/test4.gif" alt="" class="absolute inset-0 h-full w-full rounded-sm -z-10"><a href="https://github.com/hugo-rodriguesC1" class="min-w-[58px]"><img src="../assets/Icons/Github.png" alt="github logo" class=" p-1  hover:bg-green-700 transition-colors"></a></div>
+          <div>hugo-rodriguesC1</div>
+        </div>
+        <div class="flex gap-6 items-center">
           <div class="relative"><img src="../assets/test3.gif" alt="" class="absolute inset-0 h-full w-full rounded-sm -z-10"><img src="../assets/Icons/Location.png" alt="icone de position" class="p-1"></div>
           <div>Montbéliard, FR</div>
         </div>
