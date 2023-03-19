@@ -36,7 +36,7 @@ import { onMounted } from "vue";
 
     <div class="my-10 flex flex-col items-center justify-between gap-10 text-xl font-normal text-[#154d13] md:flex-row">
       <div class="md:flex flex-1 flex-col hidden">
-        <img src="../assets/BoxeGame/Scene.png" alt="scene du jeu" />
+        <img src="../assets/BoxeGame/Scene.webp" alt="scene du jeu" />
       </div>
       <div class="flex flex-1 flex-col">
         <p class="mt-10">
@@ -50,7 +50,7 @@ import { onMounted } from "vue";
         </p>
       </div>
       <div class="flex flex-1 flex-col md:hidden">
-        <img src="../assets/BoxeGame/Scene.png" alt="scene du jeu" />
+        <img src="../assets/BoxeGame/Scene.webp" alt="scene du jeu" />
       </div>
     </div>
 
@@ -67,19 +67,19 @@ import { onMounted } from "vue";
         </p>
       </div>
       <div class="flex flex-1 flex-col">
-        <img src="../assets/BoxeGame/Robot.png" alt="robot" />
+        <img src="../assets/BoxeGame/Robot.webp" alt="robot" />
       </div>
       <div class="flex flex-1 flex-col">
-        <img src="../assets/BoxeGame/BP.png" alt="blueprint du robot" />
+        <img src="../assets/BoxeGame/BP.webp" alt="blueprint du robot" />
       </div>
     </div>
 
     <div class="my-10 flex flex-col items-center justify-between gap-10 text-xl font-normal text-[#154d13] md:flex-row">
       <div class="md:flex flex-1 flex-col hidden">
-        <img src="../assets/BoxeGame/Random.png" alt="fonctions random" />
+        <img src="../assets/BoxeGame/Random.webp" alt="fonctions random" />
       </div>
       <div class="md:flex flex-1 flex-col hidden items-center justify-center">
-        <img src="../assets/BoxeGame/Ennemy.png" alt="robot ennemi" class="w-4/5" />
+        <img src="../assets/BoxeGame/Ennemy.webp" alt="robot ennemi" class="w-4/5" />
       </div>
       <div class="flex flex-1 flex-col">
         <p class="mt-10">
@@ -92,10 +92,10 @@ import { onMounted } from "vue";
         </p>
       </div>
       <div class="flex flex-1 flex-col md:hidden">
-        <img src="../assets/BoxeGame/Random.png" alt="fonctions random" />
+        <img src="../assets/BoxeGame/Random.webp" alt="fonctions random" />
       </div>
       <div class="flex flex-1 flex-col md:hidden items-center justify-center">
-        <img src="../assets/BoxeGame/Ennemy.png" alt="robot ennemi" class="w-4/5" />
+        <img src="../assets/BoxeGame/Ennemy.webp" alt="robot ennemi" class="w-4/5" />
       </div>
     </div>
 

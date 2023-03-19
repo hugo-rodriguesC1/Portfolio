@@ -28,19 +28,19 @@ import ButtonView from "../components/ButtonView.vue";
 
       </div>
       <div class="flex flex-1 flex-col">
-        <img src="../assets/Dataviz/viz.png" alt="graphique consommation énergie en France" class="small" />
+        <img src="../assets/Dataviz/viz.webp" alt="graphique consommation énergie en France" class="small" />
       </div>
     </div>
 
     <div class="my-10 flex flex-col md:flex-row items-center justify-between gap-10 text-xl font-normal text-[#154d13]">
       <div class="flex flex-1 flex-col">
-        <img src="../assets/Dataviz/viz2.png" alt="graphique consommation énergie en France" />
+        <img src="../assets/Dataviz/viz2.webp" alt="graphique consommation énergie en France" />
       </div>
       <div class="flex flex-1 flex-col">
-        <img src="../assets/Dataviz/viz3.png" alt="graphique consommation énergie en France" />
+        <img src="../assets/Dataviz/viz3.webp" alt="graphique consommation énergie en France" />
       </div>
       <div class="flex flex-1 flex-col">
-        <img src="../assets/Dataviz/viz4.png" alt="graphique consommation énergie en France" />
+        <img src="../assets/Dataviz/viz4.webp" alt="graphique consommation énergie en France" />
       </div>
     </div>
   </div>

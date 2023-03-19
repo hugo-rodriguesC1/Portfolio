@@ -20,9 +20,6 @@ window.addEventListener("load", () => {
   // mouse/touch move
   const ww = window.innerWidth;
   const wh = window.innerHeight;
-
-  console.log(ww);
-
   const mouse = new Vec2(ww / 2, wh / 2);
   const lastMouse = mouse.clone();
   const velocity = new Vec2();

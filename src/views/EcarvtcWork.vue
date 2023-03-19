@@ -29,19 +29,19 @@ import ButtonView from "../components/ButtonView.vue";
         <ButtonView text="website" link="https://e-car-vtc.fr/"/>
       </div>
       <div class="flex flex-1 flex-col">
-        <img src="../assets/Ecarvtc/ecar1.png" alt="accueil ecarvtc" class="small" />
+        <img src="../assets/Ecarvtc/ecar1.webp" alt="accueil ecarvtc" class="small" />
       </div>
     </div>
 
     <div class="flex flex-col lg:flex-row items-center justify-between gap-10 text-xl font-normal text-[#154d13] my-10">
       <div class="flex flex-1 flex-col">
-        <img src="../assets/Ecarvtc/ecar2.png" alt="plugin de réservation ecarvtc" />
+        <img src="../assets/Ecarvtc/ecar2.webp" alt="plugin de réservation ecarvtc" />
       </div>
       <div class="flex flex-1 flex-col">
-        <img src="../assets/Ecarvtc/ecar3.png" alt="pied de page ecarvtc" />
+        <img src="../assets/Ecarvtc/ecar3.webp" alt="pied de page ecarvtc" />
       </div>
       <div class="flex flex-1 flex-col">
-        <img src="../assets/Ecarvtc/ecar4.png" alt="page tarif ecarvtc" />
+        <img src="../assets/Ecarvtc/ecar4.webp" alt="page tarif ecarvtc" />
       </div>
 
     </div>

@@ -23,8 +23,8 @@ import ButtonView from "../components/ButtonView.vue";
         <ButtonView class="mb-10" text="Github" link="http://sae203.hrodrigues.fr/"></ButtonView>
       </div>
       <div class="flex flex-1 flex-col gap-[2vw] lg:flex-row">
-        <div class="flex flex-1 flex-grow"><img src="../assets/Autofill/accueil.png" alt="accueil autofill" class="w-full object-contain" /></div>
-        <div class="flex flex-1 flex-grow"><img src="../assets/Autofill/info.png" alt="infos autofill" class="w-full object-contain" /></div>
+        <div class="flex flex-1 flex-grow"><img src="../assets/Autofill/accueil.webp" alt="accueil autofill" class="w-full object-contain" /></div>
+        <div class="flex flex-1 flex-grow"><img src="../assets/Autofill/info.webp" alt="infos autofill" class="w-full object-contain" /></div>
       </div>
     </div>
   </div>
