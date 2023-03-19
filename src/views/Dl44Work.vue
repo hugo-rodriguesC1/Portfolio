@@ -4,7 +4,7 @@ import { onMounted } from "vue";
 </script>
 
 <template>
-  <div>
+  <div class="mb-48">
     <div id="anchor" class="absolute top-0"></div>
     <a href="#anchor" class="fixed bottom-20 right-[5vw] bg-[#154d13] opacity-50 w-14 h-14 flex justify-center items-center font-normal text-xl text-white hover:opacity-100 hover:w-16 hover:h-16 transition-all">TOP</a>
 
@@ -23,19 +23,19 @@ import { onMounted } from "vue";
         <p>The goal was to export the model in order to use it on an Unreal Engine 5 project.</p>
       </div>
       <div class="flex flex-1 flex-col">
-        <img src="../assets/Dl44/render.png" alt="" class="small"/>
+        <img src="../assets/Dl44/render.png" alt="rendu d'un dl44 en 3d" class="small"/>
       </div>
     </div>
 
     <div class="flex flex-col sm:flex-row items-center justify-between gap-10 text-xl font-normal text-[#154d13] my-10">
       <div class="flex flex-1 flex-col">
-        <img src="../assets/Dl44/step1.png" alt="" />
+        <img src="../assets/Dl44/step1.png" alt="pistolet simplifié en 3d" />
       </div>
       <div class="flex flex-1 flex-col">
-        <img src="../assets/Dl44/step2.png" alt="" />
+        <img src="../assets/Dl44/step2.png" alt="pistolet détaillé en 3d" />
       </div>
       <div class="flex flex-1 flex-col">
-        <img src="../assets/Dl44/step3.png" alt="" />
+        <img src="../assets/Dl44/step3.png" alt="pistolet avec matériaux en 3d" />
       </div>
     </div>
   </div>

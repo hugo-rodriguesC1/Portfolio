@@ -3,7 +3,7 @@ import ButtonView from "../components/ButtonView.vue";
 </script>
 
 <template>
-  <div class="flex flex-col items-center">
+  <div class="flex flex-col items-center mb-48">
 
 
     <div id="anchor" class="absolute top-0"></div>
@@ -18,7 +18,7 @@ import ButtonView from "../components/ButtonView.vue";
           identity and then develop the website in vuejs.
         </p>
         <br />
-        <img src="../assets/Blendup/Logo.png" alt="" />
+        <img src="../assets/Blendup/Logo.png" alt="logos" />
         <br />
         <p>
           First I thought of a hiphop festival gathering artists from different nationality and language. I began by drawing some logos on
@@ -27,16 +27,16 @@ import ButtonView from "../components/ButtonView.vue";
         </p>
       </div>
       <div class="flex flex-1 flex-col">
-        <img src="../assets/Blendup/Essais.png" alt="" />
+        <img src="../assets/Blendup/Essais.png" alt="recherches de logo" />
       </div>
     </div>
 
     <div class="mt-10 flex items-center justify-between gap-10 text-xl font-normal text-[#154d13]">
       <div class="flex flex-col">
-        <img src="../assets/Blendup/Home.png" alt="" />
+        <img src="../assets/Blendup/Home.png" alt="accueil blendup" />
       </div>
       <div class="flex flex-col">
-        <img src="../assets/Blendup/accueilMobile.png" alt="" />
+        <img src="../assets/Blendup/accueilMobile.png" alt="accueil mobile blendup" />
       </div>
     </div>
 
@@ -47,13 +47,13 @@ import ButtonView from "../components/ButtonView.vue";
 
     <div class="flex flex-col lg:flex-row items-center justify-between gap-10 text-xl font-normal text-[#154d13] mb-10">
       <div class="flex flex-1 flex-col">
-        <img src="../assets/Blendup/pages1.png" alt="" />
+        <img src="../assets/Blendup/pages1.png" alt="concerts blendup" />
       </div>
       <div class="flex flex-1 flex-col">
-        <img src="../assets/Blendup/pages2.png" alt="" />
+        <img src="../assets/Blendup/pages2.png" alt="artistes blendup" />
       </div>
       <div class="flex flex-1 flex-col">
-        <img src="../assets/Blendup/pages3.png" alt="" />
+        <img src="../assets/Blendup/pages3.png" alt="contact blendup" />
       </div>
     </div>
 

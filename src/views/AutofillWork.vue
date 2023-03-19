@@ -3,7 +3,7 @@ import ButtonView from "../components/ButtonView.vue";
 </script>
 
 <template>
-  <div class="flex flex-col items-center ">
+  <div class="flex flex-col items-center mb-48">
     <h1 class="self-start text-[3.5rem] sm:text-[4rem] md:text-[4.5rem] lg:text-[5rem] xl:text-[7rem] 3xl:text-[8.5rem] uppercase leading-none text-[#154d13] mt-5">Autofill</h1>
     <div class="mt-[2vh] flex flex-col sm:flex-row w-full items-start justify-between gap-[2vw] text-xl font-normal text-[#154d13]">
       <div class="flex flex-1 flex-col">
@@ -23,8 +23,8 @@ import ButtonView from "../components/ButtonView.vue";
         <ButtonView class="mb-10" text="Github" link="http://sae203.hrodrigues.fr/"></ButtonView>
       </div>
       <div class="flex flex-1 flex-col gap-[2vw] lg:flex-row">
-        <div class="flex flex-1 flex-grow"><img src="../assets/Autofill/accueil.png" alt="" class="w-full object-contain" /></div>
-        <div class="flex flex-1 flex-grow"><img src="../assets/Autofill/info.png" alt="" class="w-full object-contain" /></div>
+        <div class="flex flex-1 flex-grow"><img src="../assets/Autofill/accueil.png" alt="accueil autofill" class="w-full object-contain" /></div>
+        <div class="flex flex-1 flex-grow"><img src="../assets/Autofill/info.png" alt="infos autofill" class="w-full object-contain" /></div>
       </div>
     </div>
   </div>

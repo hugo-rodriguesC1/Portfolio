@@ -3,7 +3,7 @@ import { onMounted } from "vue";
 </script>
 
 <template>
-  <div>
+  <div class="mb-48">
     <div id="anchor" class="absolute top-0"></div>
     <a
       href="#anchor"
@@ -30,12 +30,12 @@ import { onMounted } from "vue";
         </p>
       </div>
       <div class="flex flex-1 flex-col">
-        <video class="z-50" src="../assets/BoxeGame//StartCinematic.mp4" controls autoplay loop></video>
+        <video class="" src="../assets/BoxeGame//StartCinematic.mp4" controls autoplay loop></video>
       </div>
     </div>
 
-    <div class="my-10 flex flex-col items-center justify-between gap-10 text-xl font-normal text-[#154d13] sm:flex-row">
-      <div class="flex flex-1 flex-col">
+    <div class="my-10 flex flex-col items-center justify-between gap-10 text-xl font-normal text-[#154d13] md:flex-row">
+      <div class="md:flex flex-1 flex-col hidden">
         <img src="../assets/BoxeGame/Scene.png" alt="scene du jeu" />
       </div>
       <div class="flex flex-1 flex-col">
@@ -49,9 +49,12 @@ import { onMounted } from "vue";
           materials to create such an ambiance.
         </p>
       </div>
+      <div class="flex flex-1 flex-col md:hidden">
+        <img src="../assets/BoxeGame/Scene.png" alt="scene du jeu" />
+      </div>
     </div>
 
-    <div class="my-10 flex flex-col items-center justify-between gap-10 text-xl font-normal text-[#154d13] sm:flex-row">
+    <div class="my-10 flex flex-col items-center justify-between gap-10 text-xl font-normal text-[#154d13] md:flex-row">
       <div class="flex flex-1 flex-col">
         <p class="mt-10">
           Next, I started the development of the playable character. I found the model of this robot on CGTrader and I used AccuRIG to rig
@@ -64,19 +67,19 @@ import { onMounted } from "vue";
         </p>
       </div>
       <div class="flex flex-1 flex-col">
-        <img src="../assets/BoxeGame/Robot.png" alt="scene du jeu" />
+        <img src="../assets/BoxeGame/Robot.png" alt="robot" />
       </div>
       <div class="flex flex-1 flex-col">
-        <img src="../assets/BoxeGame/BP.png" alt="scene du jeu" />
+        <img src="../assets/BoxeGame/BP.png" alt="blueprint du robot" />
       </div>
     </div>
 
-    <div class="my-10 flex flex-col items-center justify-between gap-10 text-xl font-normal text-[#154d13] sm:flex-row">
-      <div class="flex flex-1 flex-col">
-        <img src="../assets/BoxeGame/Random.png" alt="scene du jeu" />
+    <div class="my-10 flex flex-col items-center justify-between gap-10 text-xl font-normal text-[#154d13] md:flex-row">
+      <div class="md:flex flex-1 flex-col hidden">
+        <img src="../assets/BoxeGame/Random.png" alt="fonctions random" />
       </div>
-      <div class="flex flex-1 flex-col justify-center items-center">
-        <img src="../assets/BoxeGame/Ennemy.png" alt="scene du jeu" class="w-4/5" />
+      <div class="md:flex flex-1 flex-col hidden items-center justify-center">
+        <img src="../assets/BoxeGame/Ennemy.png" alt="robot ennemi" class="w-4/5" />
       </div>
       <div class="flex flex-1 flex-col">
         <p class="mt-10">
@@ -88,15 +91,19 @@ import { onMounted } from "vue";
           different attacks with different amount of damage randomly so you can't really predict its movements.
         </p>
       </div>
+      <div class="flex flex-1 flex-col md:hidden">
+        <img src="../assets/BoxeGame/Random.png" alt="fonctions random" />
+      </div>
+      <div class="flex flex-1 flex-col md:hidden items-center justify-center">
+        <img src="../assets/BoxeGame/Ennemy.png" alt="robot ennemi" class="w-4/5" />
+      </div>
     </div>
 
     <div class="my-10 flex flex-col items-center justify-between gap-10 text-xl font-normal text-[#154d13] sm:flex-row">
       <div class="flex flex-1 flex-col items-center">
-        <p class="my-32 w-1/2">
-          Finally, I joined all the elements together, added menus and navigation between levels and it took form.
-        </p>
+        <p class="my-32 w-1/2">Finally, I joined all the elements together, added menus and navigation between levels and it took form.</p>
         <br />
-        <video class="w-3/5 z-50" src="../assets/BoxeGame/Final.mp4" controls></video>
+        <video class="sm:w-3/5" src="../assets/BoxeGame/Final.mp4" controls></video>
       </div>
     </div>
   </div>

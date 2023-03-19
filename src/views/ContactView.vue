@@ -9,7 +9,7 @@ import { onMounted } from "vue";
     >
       Contact
     </h1>
-    <div class="mt-[2vh] flex justify-between gap-10 text-xl xl:text-2xl font-normal text-[#154d13]">
+    <div class="mt-[2vh] flex justify-between gap-10 text-sm xs:text-xl xl:text-2xl font-normal text-[#154d13]">
       <div class="flex flex-1 flex-col gap-5">
         <img src="../assets/test1.gif" alt="" class="h-1 w-full md:w-[40vw]">
         <div class="flex gap-6 items-center">
@@ -17,15 +17,15 @@ import { onMounted } from "vue";
           <div>Hugo Rodrigues</div>
         </div>
         <div class="flex gap-6 items-center">
-          <div class="relative"><img src="../assets/test2.gif" alt="" class="absolute inset-0 h-full w-full rounded-sm -z-10"><a href="mailto:rodrig.hugo90@gmail.com" class="min-w-[58px]"><img src="../assets/Icons/Mail.png" alt="mail logo" class=" p-1  hover:bg-green-700 transition-colors"></a></div>
+          <div class="relative"><img src="../assets/test2.gif" alt="" class="absolute inset-0 h-full w-full rounded-sm -z-10"><a href="mailto:rodrig.hugo90@gmail.com" class="w-[58px] h-[58px]"><img src="../assets/Icons/Mail.png" alt="mail logo" class=" p-1  hover:bg-green-700 transition-colors"></a></div>
           <div>rodrig.hugo90@gmail.com</div>
         </div>
         <div class="flex gap-6 items-center">
-          <div class="relative"><img src="../assets/test4.gif" alt="" class="absolute inset-0 h-full w-full rounded-sm -z-10"><a href="https://github.com/hugo-rodriguesC1" class="min-w-[58px]"><img src="../assets/Icons/Github.png" alt="github logo" class=" p-1  hover:bg-green-700 transition-colors"></a></div>
+          <div class="relative"><img src="../assets/test3.gif" alt="" class="absolute inset-0 h-full w-full rounded-sm -z-10"><a href="https://github.com/hugo-rodriguesC1" class=""><img src="../assets/Icons/Github.png" alt="github logo" class=" p-1  hover:bg-green-700 transition-colors"></a></div>
           <div>hugo-rodriguesC1</div>
         </div>
         <div class="flex gap-6 items-center">
-          <div class="relative"><img src="../assets/test3.gif" alt="" class="absolute inset-0 h-full w-full rounded-sm -z-10"><img src="../assets/Icons/Location.png" alt="icone de position" class="p-1"></div>
+          <div class="relative"><img src="../assets/test4.gif" alt="" class="absolute inset-0 h-full w-full rounded-sm -z-10"><img src="../assets/Icons/Location.png" alt="icone de position" class="p-1"></div>
           <div>Montbéliard, FR</div>
         </div>
         <img src="../assets/test2.gif" alt="" class="h-1 w-full md:w-[40vw]">
