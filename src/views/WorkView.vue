@@ -1,5 +1,5 @@
 <template>
-  <div class="">
+  <div class="mb-20">
     <router-link to="/ecarvtcwork" class=" flex flex-col md:flex-row md:items-center  gap-[2vw] uppercase text-[#154d13]">
       <h2 class="xl:text-[7rem] 3xl:text-[8.5rem] text-[4rem] leading-none mt-5">Ecarvtc</h2>
       <div class="xl:text-2xl text-lg leading-none">
@@ -37,6 +37,13 @@
     <router-link to="/datavizwork" class="flex flex-col md:flex-row md:items-center gap-[2vw] uppercase leading-none text-[#154d13]">
       <h2 class="xl:text-[7rem] 3xl:text-[8.5rem] text-[4rem]">Dataviz</h2>
       <div class="xl:text-2xl text-lg leading-none">Data visualization website developed in vuejs with chartjs, energy consumption in france</div>
+    </router-link>
+
+    <div class="my-7 h-0.5 w-full bg-[#154d13]"></div>
+
+    <router-link to="/datavizwork" class="flex flex-col md:flex-row md:items-center gap-[2vw] uppercase leading-none text-[#154d13]">
+      <h2 class="xl:text-[7rem] 3xl:text-[8.5rem] text-[4rem]">Boxe&nbsp;Game</h2>
+      <div class="xl:text-2xl text-lg leading-none">Robot boxing game made in unreal engine 5 in 3 days</div>
     </router-link>
   </div>
 </template>
