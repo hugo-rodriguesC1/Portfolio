@@ -325,27 +325,27 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="mt-[22vh]">
+  <div class="2xl:overflow-hidden ">
     <div v-if="isLoading" class="loader absolute top-0 left-0 z-50 flex h-screen w-screen items-center justify-center bg-[#D3D1CC]">
       <div class="h-20 w-20 animate-ping"></div>
     </div>
 
-    <div class="mt-[2vh] text-[3.5rem] sm:text-[4rem] md:text-[4.5rem] lg:text-[5rem] xl:text-[6.5rem] 2xl:text-[8.5rem]">
-      <div class="flex items-center justify-between gap-5 md:h-[13vh] mt-0 md:-mt-10 lg:mt-0">
+    <div class="mt-[2vh] text-[3.5rem] sm:text-[4rem] md:text-[4.5rem] lg:text-[5rem] xl:text-[6.5rem] 3xl:text-[8.5rem]">
+      <div class="flex items-center justify-between gap-5 md:h-[13vh] mt-0 md:-mt-5 lg:mt-0">
         <h1 class="-mb-6 font-light uppercase text-[#154d13]">Digital</h1>
-        <img src="../assets/test1.gif" alt="dégradé de couleur animé" class="hidden max-h-[11vh] w-full sm:block lg:max-h-[12.5vh] max-w-[33vw] lg:max-w-none" />
+        <img src="../assets/test1.gif" alt="dégradé de couleur animé" class="hidden max-h-[10vh] w-full sm:block lg:max-h-[12.5vh] max-w-[33vw] lg:max-w-none" />
       </div>
-      <div class="flex items-center justify-between gap-5 md:h-[13vh] mt-0 md:-mt-10 : lg:mt-0">
+      <div class="flex items-center justify-between gap-5 md:h-[13vh] mt-0 md:-mt-5 : lg:mt-0">
         <h1 class="-mb-6 font-light uppercase text-[#154d13]">Designer</h1>
-        <img src="../assets/test2.gif" alt="dégradé de couleur animé" class="hidden max-h-[11vh] w-full sm:block lg:max-h-[12.5vh] max-w-[33vw] lg:max-w-none" />
+        <img src="../assets/test2.gif" alt="dégradé de couleur animé" class="hidden max-h-[10vh] w-full sm:block lg:max-h-[12.5vh] max-w-[33vw] lg:max-w-none" />
       </div>
-      <div class="flex items-center justify-between gap-5 md:h-[13vh] mt-0 md:-mt-10 lg:mt-0">
+      <div class="flex items-center justify-between gap-5 md:h-[13vh] mt-0 md:-mt-5 lg:mt-0">
         <h1 class="-mb-6 font-light uppercase text-[#154d13]">Creative</h1>
-        <img src="../assets/test3.gif" alt="dégradé de couleur animé" class="hidden max-h-[11vh] w-full sm:block lg:max-h-[12.5vh] max-w-[33vw] lg:max-w-none" />
+        <img src="../assets/test3.gif" alt="dégradé de couleur animé" class="hidden max-h-[10vh] w-full sm:block lg:max-h-[12.5vh] max-w-[33vw] lg:max-w-none" />
       </div>
-      <div class="flex items-center justify-between gap-5 md:h-[13vh] mt-0 md:-mt-10 lg:mt-0">
+      <div class="flex items-center justify-between gap-5 md:h-[13vh] mt-0 md:-mt-5 lg:mt-0">
         <h1 class="-mb-6 font-light uppercase text-[#154d13]">Developer</h1>
-        <img src="../assets/test4.gif" alt="dégradé de couleur animé" class="hidden max-h-[11vh] w-full sm:block lg:max-h-[12.5vh] max-w-[33vw] lg:max-w-none" />
+        <img src="../assets/test4.gif" alt="dégradé de couleur animé" class="hidden max-h-[10vh] w-full sm:block lg:max-h-[12.5vh] max-w-[33vw] lg:max-w-none" />
       </div>
     </div>
 

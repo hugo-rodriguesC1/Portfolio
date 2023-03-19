@@ -5,7 +5,7 @@ import { onMounted } from "vue";
 <template>
   <div>
     <h1
-      class="self-start text-[3.5rem] uppercase leading-none text-[#154d13] sm:text-[4rem] md:text-[4.5rem] lg:text-[5rem] xl:text-[6.5rem] 2xl:text-[8.5rem]"
+      class="self-start text-[3.5rem] uppercase leading-none text-[#154d13] sm:text-[4rem] md:text-[4.5rem] lg:text-[5rem] xl:text-[7rem] 3xl:text-[8.5rem] mt-5"
     >
       Contact
     </h1>

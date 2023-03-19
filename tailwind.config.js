@@ -10,7 +10,7 @@ module.exports = {
         // Ne pas oublier de les charger dans '/index.html' !
       },
       screens: {
-        "3xl": "1900px",
+        "3xl": "1700px",
         "xs": "600px",
 
       },

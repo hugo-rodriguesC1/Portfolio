@@ -7,6 +7,7 @@ import AutofillWork from "../views/AutofillWork.vue";
 import BlendupWork from "../views/BlendupWork.vue";
 import Dl44Work from "../views/Dl44Work.vue";
 import DatavizWork from "../views/DatavizWork.vue";
+import PageNotFound from "../views/404.vue"
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -19,6 +20,8 @@ const router = createRouter({
     { path: "/blendupwork", name: "Blendup", component: BlendupWork },
     { path: "/dl44work", name: "Dl44", component: Dl44Work },
     { path: "/datavizwork", name: "Dataviz", component: DatavizWork },
+    { path: '/:pathMatch(.)',  name: '404', component: PageNotFound },
+
     // ici les autre routes
   ],
 });
