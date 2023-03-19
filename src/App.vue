@@ -35,7 +35,7 @@ function Refresh() {
   height: 100%;
   content: "";
   opacity: 0.08;
-  z-index: 100;
+  z-index: 40;
   pointer-events: none;
   background: url(./assets/noise.gif);
 }
