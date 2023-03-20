@@ -13,7 +13,7 @@ import { onMounted } from "vue";
       <div class="flex flex-1 flex-col">
         <p>
           This is my first creation with Blender. In the same time, I was developping a star wars based video game, so I decided to model
-          the blaster whiwh will be used in the game.
+          the blaster which will be used in the game.
         </p>
         <br />
         <p>

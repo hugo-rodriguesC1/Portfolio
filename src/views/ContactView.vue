@@ -26,7 +26,7 @@ import { onMounted } from "vue";
         </div>
         <div class="flex gap-6 items-center">
           <div class="relative"><img src="../assets/test4.gif" alt="" class="absolute inset-0 h-full w-full rounded-sm -z-10"><img src="../assets/Icons/Location.png" alt="icone de position" class="p-1"></div>
-          <div>Montbéliard, FR</div>
+          <div>Montbéliard, FRANCE</div>
         </div>
         <img src="../assets/test2.gif" alt="" class="h-1 w-full md:w-[40vw]">
       </div>
