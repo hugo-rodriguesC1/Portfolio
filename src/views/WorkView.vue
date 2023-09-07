@@ -1,8 +1,8 @@
 <template>
   <div class="mb-28">
     <router-link to="/montbelartswork" class=" flex flex-col md:flex-row md:items-center  gap-[2vw] uppercase text-[#154d13]">
-      <h2 class="xl:text-[7rem] 3xl:text-[8.5rem] text-[4rem] hidden sm:block">Montbel&nbsp;Arts</h2>
-      <h2 class="xl:text-[7rem] 3xl:text-[8.5rem] text-[4rem] sm:hidden">Montbel'Arts</h2>
+      <h2 class="xl:text-[7rem] 3xl:text-[8.5rem] text-[4rem] leading-none mt-5">Montbel'Arts</h2>
+
       <div class="xl:text-2xl text-lg leading-none">
         Wordpress website for Montbéliard conservatory association of users. 
       </div>
