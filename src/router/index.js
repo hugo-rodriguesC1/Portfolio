@@ -3,6 +3,7 @@ import AccueilView from "../views/AccueilView.vue";
 import WorkView from "../views/WorkView.vue";
 import ContactView from "../views/ContactView.vue";
 import EcarvtcWork from "../views/EcarvtcWork.vue";
+import MontbelartsWork from "../views/MontbelartsWork.vue";
 import AutofillWork from "../views/AutofillWork.vue";
 import BlendupWork from "../views/BlendupWork.vue";
 import Dl44Work from "../views/Dl44Work.vue";
@@ -17,6 +18,7 @@ const router = createRouter({
     { path: "/work", name: "Work", component: WorkView },
     { path: "/contact", name: "Contact", component: ContactView },
     { path: "/ecarvtcwork", name: "Ecarvtc", component: EcarvtcWork },
+    { path: "/montbelartswork", name: "Montbelarts", component: MontbelartsWork },
     { path: "/autofillwork", name: "Autofill", component: AutofillWork },
     { path: "/blendupwork", name: "Blendup", component: BlendupWork },
     { path: "/dl44work", name: "Dl44", component: Dl44Work },
