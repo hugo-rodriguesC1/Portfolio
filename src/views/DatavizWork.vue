@@ -24,7 +24,7 @@ import ButtonView from "../components/ButtonView.vue";
           The average region consumption page was developed using a leaflet map which allows click on region to update diplayed datas.
         </p>
         <br />
-        <ButtonView text="website" link="http://datavisualisationenergie.hrodrigues.fr/"/>
+        <ButtonView text="website" link="http://datavis.hrodrigues.fr/"/>
 
       </div>
       <div class="flex flex-1 flex-col">
