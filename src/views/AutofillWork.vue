@@ -23,7 +23,7 @@ import ButtonView from "../components/ButtonView.vue";
         <br />
         <p>The project is downloadable from my Github, with the link below.</p>
         <br />
-        <ButtonView class="mb-10" text="Github" link="http://sae203.hrodrigues.fr/"></ButtonView>
+        <ButtonView class="mb-10" text="Github" link="https://github.com/hugo-rodriguesC1/Autofill"></ButtonView>
       </div>
       <div class="flex flex-1 flex-col gap-[2vw] lg:flex-row">
         <div class="flex flex-1 flex-grow"><img src="../assets/Autofill/accueil.webp" alt="accueil autofill" class="w-full object-contain" /></div>
